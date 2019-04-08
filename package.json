@@ -1,0 +1,22 @@
+{
+  "name": "dark-mode",
+  "version": "1.0.0",
+  "description": "Dark Mode made configurable using JavaScript",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barclayd/Dark-Mode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barclayd/Dark-Mode/issues"
+  },
+  "homepage": "https://github.com/barclayd/Dark-Mode#readme",
+  "dependencies": {
+    "animejs": "^3.0.1"
+  }
+}
