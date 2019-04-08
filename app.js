@@ -9,16 +9,21 @@ darkMode.addEventListener('click', () => {
         duration: 750,
         easing: "easeOutExpo"
     });
-    toggle = !toggle;
     timeline
         .add({
             targets: '.sun',
             d: [{
-                value: moonPath
+                value: toggle ? sunPath : moonPath
             }]
         })
         .add({
             targets: '#darkMode',
-            rotate: 330
+            rotate: toggle ? -330 : 330
+        }, '-= 200')
+        .add({
+            targets: 'section',
+            backgroundColor: toggle ? 'rgb(255, 255, 255)' : 'rgb(0, 2, 4)',
+            color: toggle ? 'rgb(0, 13, 26)' : 'rgb(255, 255, 255)'
         }, '-= 200');
+    toggle = !toggle;
 });
