@@ -4,6 +4,9 @@ const sunPath = 'M56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.5
 
 const darkMode = document.querySelector('#darkMode');
 
+const heading = document.getElementById('title');
+
+
 darkMode.addEventListener('click', () => {
     const timeline = anime.timeline({
         duration: 750,
@@ -25,5 +28,8 @@ darkMode.addEventListener('click', () => {
             backgroundColor: toggle ? 'rgb(255, 255, 255)' : 'rgb(0, 2, 4)',
             color: toggle ? 'rgb(0, 13, 26)' : 'rgb(255, 255, 255)'
         }, '-= 200');
-    toggle = !toggle;
+    timeline.finished.then(() => {
+        toggle ? heading.innerHTML = 'Lights off?' : heading.innerHTML = 'Lights on?';
+        toggle = !toggle;
+    });
 });
