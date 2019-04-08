@@ -1,11 +1,10 @@
 let toggle = false;
+// svg paths
 const moonPath = 'M16 29.5C16 44.964 28 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0C28 0 16 14.036 16 29.5Z';
 const sunPath = 'M56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0C43.464 0 56 12.536 56 28Z';
-
+// dom elements
 const darkMode = document.querySelector('#darkMode');
-
 const heading = document.getElementById('title');
-
 
 darkMode.addEventListener('click', () => {
     const timeline = anime.timeline({
